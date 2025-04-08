@@ -60,7 +60,7 @@ function displayMovieDetails(movie) {
 
   fetchMovieCredits(movie.id);
 
-  const fullUrl = `https://dashflix.top/player.html?id=${movie.id}`;
+  const fullUrl = `https://nextflix.top/player.html?id=${movie.id}`;
   const imageUrl = IMAGE_BASE_URL + movie.poster_path;
 
   const metaTags = [
@@ -69,8 +69,8 @@ function displayMovieDetails(movie) {
     { property: "og:url", content: fullUrl },
     { name: "twitter:image", content: imageUrl },
     { name: "twitter:image:alt", content: movie.title + " Poster" },
-    { property: "og:title", content: `${movie.title} - Watch Now on Dashflix` },
-    { name: "twitter:title", content: `${movie.title} - Watch Now on Dashflix` },
+    { property: "og:title", content: `${movie.title} - Watch Now on nextflix` },
+    { name: "twitter:title", content: `${movie.title} - Watch Now on nextflix` },
     { property: "og:description", content: movie.overview },
     { name: "twitter:description", content: movie.overview }
   ];
@@ -90,7 +90,7 @@ function displayMovieDetails(movie) {
   document.head.appendChild(canonical);
 
   // Page Title
-  document.title = `${movie.title} - Watch Now on Dashflix`;
+  document.title = `${movie.title} - Watch Now on nextflix`;
 }
 
 function displayMovieCredits(credits) {

@@ -21,7 +21,7 @@ movies.forEach((movie) => {
     // Use a placeholder image if poster_path is null or undefined
     const poster = movie.poster_path
         ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-        : 'https://placehold.co/500x750?text=DASHFLIX';
+        : 'https://placehold.co/500x750?text=nextflix';
 
     let movieSlide = document.createElement("div");
     movieSlide.classList.add("swiper-slide");

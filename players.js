@@ -28,7 +28,7 @@ function displayTvShowDetails(tvShow) {
     document.getElementById("creator").textContent = tvShow.created_by.map(creator => creator.name).join(", ");
 
     // Full URL and image URL for meta tags
-    const fullUrl = `https://dashflix.top/players.html?id=${tvShow.id}`;
+    const fullUrl = `https://nextflix.top/players.html?id=${tvShow.id}`;
     const imageUrl = IMAGE_BASE_URL + tvShow.poster_path;
 
     // Meta Tags for Social Sharing - Add them to the <head> after data is fetched
@@ -38,8 +38,8 @@ function displayTvShowDetails(tvShow) {
         { property: "og:url", content: fullUrl },
         { name: "twitter:image", content: imageUrl },
         { name: "twitter:image:alt", content: `${tvShow.name} Poster` },
-        { property: "og:title", content: `${tvShow.name} - Watch Now on Dashflix` },
-        { name: "twitter:title", content: `${tvShow.name} - Watch Now on Dashflix` },
+        { property: "og:title", content: `${tvShow.name} - Watch Now on nextflix` },
+        { name: "twitter:title", content: `${tvShow.name} - Watch Now on nextflix` },
         { property: "og:description", content: tvShow.overview },
         { name: "twitter:description", content: tvShow.overview }
     ];
@@ -59,7 +59,7 @@ function displayTvShowDetails(tvShow) {
     document.head.appendChild(canonical);
 
     // Page Title
-    document.title = `${tvShow.name} - Watch Now on Dashflix`;
+    document.title = `${tvShow.name} - Watch Now on nextflix`;
 }
 
 function populateSeasonDropdown(seasons) {
